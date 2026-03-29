@@ -4,3 +4,6 @@
 4. Ott platform like Netflix/ Amazon Prime
 5. Real time Chat Application
 6. Video Viewwing and streaming platform like Yt/Dailymotion
+7. Ride Share Application like Ola/Uber
+
+    View .io XML files at draw.io or diagrams.net site
