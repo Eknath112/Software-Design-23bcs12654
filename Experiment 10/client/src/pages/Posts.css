@@ -1,0 +1,159 @@
+.posts-container {
+  min-height: calc(100vh - 70px);
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.posts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.posts-header h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+}
+
+.empty-state {
+  background: white;
+  border-radius: 20px;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 80px;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.empty-state h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.empty-state p {
+  color: #666;
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.post-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.post-image-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background: #f8f9fa;
+}
+
+.post-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post-status {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+}
+
+.status-draft {
+  background: rgba(255, 255, 255, 0.9);
+  color: #666;
+}
+
+.status-analyzed {
+  background: rgba(38, 222, 129, 0.9);
+  color: white;
+}
+
+.status-posted {
+  background: rgba(102, 126, 234, 0.9);
+  color: white;
+}
+
+.post-info {
+  padding: 20px;
+}
+
+.post-filename {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.post-date {
+  color: #999;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.post-stats {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: #666;
+}
+
+.post-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-small {
+  padding: 8px 16px;
+  font-size: 14px;
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .posts-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .posts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .post-actions {
+    flex-direction: column;
+  }
+}
